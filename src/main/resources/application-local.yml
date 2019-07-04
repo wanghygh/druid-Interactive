@@ -1,0 +1,22 @@
+## 应用 ##
+spring:
+  application:
+    name: druid
+
+## io.druid ##
+druid:
+  ## http 查询 ##
+  http:
+    url: http://192.168.142.134:8082/druid/v2/
+  ## 客户端配置 ##
+  config:
+    boss: 1
+    worker: 2
+    connectionNumber: 8
+    readTimeout: 6000 # 毫秒 #
+    unusedConnectionTimeout: 1500 # 毫秒 #
+
+## 日志 ##
+logging:
+  level:
+    wang.huaiyu.${spring.application.name}: info
